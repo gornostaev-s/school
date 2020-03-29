@@ -1,0 +1,12 @@
+/node_modules/
+/dist/
+/.git/
+/css/
+/**/_backstage
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
+<<<<<<< HEAD
+=======
+
+>>>>>>> f9ed209840a87ca1e4340d18fae957499431652b
