@@ -400,6 +400,7 @@ h2
     position: absolute
     right: -179px
     bottom: -188px
+    z-index: 10
 
 .bottom-sec
     margin-top: 19px
@@ -411,7 +412,7 @@ h2
         text-align: center
         margin-top: 140px
         padding-left: 32px
-        margin-bottom: 41px
+        margin-bottom: 18px
 
 .faq-title
     font-family: "Montserrat"
@@ -420,18 +421,164 @@ h2
     font-size: 24px
     line-height: 29px
     color: #000000
+    cursor: pointer
 
 .faq-card
     position: relative
+    border-bottom: 2px solid #C4C4C4
+    padding-bottom: 18px
+    margin-top: 23px
     > img
         position: absolute
         right: 23px
-        top: 16px
+        top: 0px
+        cursor: pointer
+        transition: 0.25s
     .faq-title
         white-space: pre-line
 
+.faq-active
+    > img
+        transform: rotate(180deg)
 
+.faq-desc
+    font-size: 24px
+    line-height: 142%
+    font-family: "Montserrat"
+    padding-top: 22px
+    max-width: 900px
+    margin-left: 79px
 
+#callback-sec
+    background: url(/img/callback-bg.png)
+    min-height: 416px
+    margin-top: 116px
+    padding-top: 24px
+    text-align: center
+    h2
+        text-align: center
+        white-space: pre-line
+        color: #fff
+        text-transform: uppercase
+    h3
+        font-size: 48px
+        line-height: 59px
+        font-weight: bold
+        font-family: "Montserrat"
+        text-transform: uppercase
+        margin-top: -10px
+    h4
+        color: #fff
+        font-family: "Montserrat"
+        font-weight: bold
+        font-size: 24px
+        line-height: 29px
+        margin-top: -30px
+
+.form-container
+    padding-left: 15px
+    padding-right: 15px
+    margin-left: auto
+    margin-right: auto
+    margin-top: -12px
+    input[type="text"]
+        background: #fff
+        min-width: 280px
+        padding-top: 23px
+        padding-bottom: 22px
+        padding-left: 20px
+        padding-right: 20px
+        border-radius: 10px
+        border: 0px
+        margin-left: 2px
+        margin-right: 14px
+        font-size: 18px
+        line-height: 25px
+        color: #000000
+    input[type="submit"]
+        display: inline-block
+        font-family: "Open Sans",Sans-serif
+        font-size: 24px
+        font-weight: 700
+        line-height: 32px
+        background-color: #3c5eff
+        border-radius: 10px
+        width: 380px
+        height: 70px
+        color: #fff
+        transition: .25s
+        margin-left: 4px
+        text-align: center
+        padding-top: 0px
+        letter-spacing: .7px
+        border: 0
+        transform: translateY(2px)
+
+.footer-sec
+    width: 50%
+    height: 100%
+
+.black-bg
+    background: #000
+
+footer
+    height: 668px
+    display: flex
+
+.footer-content
+    max-width: 590px
+    margin-left: auto
+    color: #fff
+    p
+        font-family: "Montserrat"
+        font-size: 18px
+        line-height: 22px
+        margin-top: 10px
+
+.footer-logo
+    margin-top: 40px
+
+.contact-p
+    font-family: "Montserrat"
+    font-size: 18px
+    line-height: 22px
+    white-space: pre-line
+    padding-left: 51px
+    margin-bottom: 20px
+    a
+        color: #fff
+
+.copyright
+    margin-bottom: 30px
+
+.geo-icon:before
+    background: url(/img/geo-footer.png)
+    content: ''
+    width: 30px
+    height: 44px
+    display: block
+    position: absolute
+    margin-left: -49px
+
+.call-icon:before
+    background: url(/img/call-icon.png)
+    content: ''
+    width: 30px
+    height: 30px
+    display: block
+    position: absolute
+    margin-left: -49px
+    margin-top: 7px
+
+.footer-content
+    .social-p
+        white-space: normal
+        padding-left: 0
+        margin-top: 26px
+        a
+            margin-right: 26px
+        a:hover
+            text-decoration: none
 
 
 
