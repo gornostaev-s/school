@@ -13,7 +13,7 @@
 
 </head>
 <body>
-   <section id="home-sec1">
+ <section id="home-sec1">
     <div class="header">
         <div class="container container1">
             <div class="row">
@@ -295,7 +295,7 @@
                                 <p>Время занятий
                                     <b>планируется</b>
                                 </p>
-                                <a href="javascript:void(0);">
+                                <a class="sign" href="javascript:void(0);">
                                     Записаться
                                 </a>
                             </div>
@@ -317,7 +317,7 @@
                     </h2>
                     <div class="row">
                         <div class="slider-reviews-box">
-                           <div class="slider-reviews-item">
+                         <div class="slider-reviews-item">
                             <div class="col-md-2">
                                 <div class="img-client-name">
                                     <img class="img-client" src="img/img-client-ph.png" alt="">
@@ -334,7 +334,7 @@
                         </div>
                         <div class="slider-reviews-item">
                             <div class="col-md-2">
-                                <div class="img-client-name">
+                                <div class="box-client-name">
                                     <img class="img-client" src="img/img-client-ph.png" alt="">
                                     <div class="client-name">
                                         Мария К.
@@ -343,7 +343,13 @@
                             </div>
                             <div class="col-md-10">
                                 <div class="review-content-text">
-                                    «Я отмечаю, что за время занятий заметно улучшились многие качества и способности. Например, внимание выросло в разы, что способствует повышению возможностей для мышления. Изменения в самом мышлении позволяют работать с выросшими объемами данных, которые "новое" внимание теперь может удерживать в поле мыслительного процесса. И сам процесс становится быстрее и изобретательнее. Что помогает решать задачи, в том числе служебные, на принципиально другом уровне.» (Мария К.)
+                                    «Я отмечаю, что за время занятий заметно улучшились многие качества и
+                                    способности. Например, внимание выросло в разы, что способствует повышению
+                                    возможностей для мышления. Изменения в самом мышлении позволяют работать с
+                                    выросшими объемами данных, которые "новое" внимание теперь может удерживать
+                                    в поле мыслительного процесса. И сам процесс становится быстрее и
+                                    изобретательнее. Что помогает решать задачи, в том числе служебные, на
+                                    принципиально другом уровне.» (Мария К.)
                                 </div> 
                             </div>
                         </div>
@@ -366,22 +372,61 @@
                         <img class="image-facebook" src="img/img-facebook4.png" alt="">
                     </div>
                 </div>
-                <a href="javascript:void(0);">
+                <a class="button-facebook" href="javascript:void(0);">
                     Перейти в Facebook
                 </a>
             </div>
         </section>
 
+        <section id="callback-sec">
+            <h2 class="custom-h2">Начните обучение в школе
+                развития мышления и интеллекта
+            и узнайте, на что вы способны!</h2>
+            <h4 class="custom-h4">Запоните форму и <span class="text-blue">начните обучение!</span></h4>
+            <div class="form-container">
+                <form>
+                    <input type="text" name="name" placeholder="Ваше имя">
+                    <input type="text" name="tel" placeholder="Ваше телефон">
+                    <input type="submit" value="Записаться на обучение">
+                </form>
+            </section>
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script>
-            jQuery('.slider-reviews-box').slick({
-                nav: true,
-            });
-        </script>
+            <footer>
+                <div class="footer-sec black-bg">
+                    <div class="footer-content">
+                        <img class="footer-logo" src="/img/logo.png">
+                        <p class="copyright">Школа развития мышления и интеллекта © 2020</p>
+                        <p class="contact-p geo-icon">Ростов-на-Дону, ул. Семашко 79
+                        Лекторий «Открытый Космос»</p>
+                        <p class="contact-p call-icon"><a href="tel:+79289545320">+7(928) 954-53-20</a>
+                        (для взрослой группы)</p>
+                        <p class="contact-p call-icon"><a href="tel:+79198913189">+7(919) 891-31-89</a>
+                        (для детской группы)</p>
+                        <p class="contact-p"><a href="javascript:void(0)">Программа для детей</a></p>
+                        <p class="contact-p"><a href="javascript:void(0)">Программа для взрослых</a></p>
+                        <p class="contact-p"><a href="javascript:void(0)">Политика конфиденциальности</a></p>
+                        <p class="contact-p social-p">
+                            <a href="javascript:void(0);"><img src="/img/instagram.png"></a>
+                            <a href="javascript:void(0);"><img src="/img/vk.png"></a>
+                            <a href="javascript:void(0);"><img src="/img/youtube.png"></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-sec">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d0a506800b1a167e9d76c3ce4124939e0877e5b61ce4e44f68e8b9d533f4dad&amp;width=100%25&amp;height=668&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </footer>
 
 
-    </body>
+            <script src="js/jquery.min.js"></script>
+            <script src="js/slick.min.js"></script>
+            <script>
+                jQuery('.slider-reviews-box').slick({
+                    nav: true,
+                });
+            </script>
 
-    </html>
+
+        </body>
+
+        </html>
