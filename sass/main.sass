@@ -16,6 +16,44 @@
     .image-container
         width: 1240px
 
+.modal-callback
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 10
+
+.modal-overflow
+    background: rgba(0, 0, 0, 0.5)
+    width: 100%
+    height: 100%
+    position: absolute
+
+.modal-content
+    margin-top: 20px
+    max-width: 580px
+    min-height: 440px
+    background: #E9EBF4
+    text-align: center
+    position: relative
+    z-index: 10
+    margin-left: auto
+    margin-right: auto
+    padding-top: 4px
+    padding-left: 20px
+    padding-right: 20px
+    h3
+        color: #3C5EFF
+        font-weight: bold
+        font-size: 36px
+        font-family: "Montserrat"
+    h4
+        font-size: 24px
+        color: #000000
+        font-weight: 200
+        font-family: "Montserrat"
+
 #home-sec
     background: url(/img/home-bg.png)
     background-position: center center
@@ -151,6 +189,7 @@
     top: 36px
 
 #what-sec
+    overflow: inherit
     h2
         white-space: pre-line
         text-align: center
@@ -582,6 +621,18 @@ footer
 
 
 @media screen and (max-width: 1200px)
+    .header
+        li
+            a
+                padding-left: 10px
+                padding-right: 10px
+    .faq-card
+        padding-right: 52px
+    .contact-sec
+        padding-left: 50px
+        padding-right: 100px
+    .callback-sec
+        left: -83px
     #count-sec
         .num-row
             margin-top: 15px
@@ -629,6 +680,8 @@ footer
             a
                 padding-top: 0
                 padding-bottom: 0
+                padding-left: 15px
+                padding-right: 15px
             a:hover
                 border-bottom: 0
     #count-sec
@@ -668,8 +721,13 @@ footer
     .for-card-wrapper
         a
             width: 330px
+    .answ1
+        opacity: 0.3
 
-@media (max-width: 768px)
+@media (max-width: 769px)
+    .pass-card
+        min-height: 220px
+        padding-bottom: 10px
     .for-container
         flex-wrap: wrap
     .for-card-wrapper
@@ -688,6 +746,189 @@ footer
         .what-container
             margin-left: 15px
             margin-right: 15px
+    #author
+        .text-sec
+            padding-left: 15px
+    .video-but
+        right: -14.24vw
+        bottom: -89.53%
+        img
+            max-width: 28.65vw
+    .header-contact-text
+        font-size: 9px
+        line-height: 12px
+    .callback-sec
+        padding-top: 0
+        a
+            font-size: 17px
+        .callback-open
+            font-size: 9px
+    .title-container
+        margin-top: 28px
+    .header
+        li
+            margin-bottom: 0px
+            a
+                font-size: 10px
+        ul.topmenu
+            display: flex
+            justify-content: center
+    .title-container
+        h2
+            font-size: 20px
+            line-height: 24px
+        h3
+            font-size: 18px
+            margin-top: 10px
+        h4
+            font-size: 18px
+            line-height: 22px
+        a
+            font-size: 15px
+            line-height: 28px
+            width: 240px
+            height: 50px
+            padding-top: 12px
+            margin-top: 0px
+    #home-sec
+        min-height: 597px
+        background-position: 110px 330px
+    #what-sec
+        h2
+            font-size: 20px
+            line-height: 25px
+            margin-bottom: 10px
+        p
+            font-size: 10px
+            line-height: 14px
+            margin-bottom: 9px
+    #result
+        margin-top: -40px
+        h2
+            font-size: 20px
+            line-height: 26px
+        img
+            max-width: 300px
+    .result-text
+        p
+            font-size: 14px
+            line-height: 20px
+    h2
+        font-size: 20px
+        line-height: 24px
+    .pass-card
+        p
+            font-size: 10px
+    .callback-sec
+        left: 0
+        text-align: center
+    .contact-sec
+        display: none
+    #pass
+        h3
+            font-size: 18px
+            white-space: normal
+        a
+            font-size: 15px
+            line-height: 28px
+            width: 290px
+            height: 50px
+            padding-top: 12px
+    #for
+        h2
+            white-space: normal
+        h3
+            font-size: 15px
+            white-space: normal
+            margin-top: 30px
+        h4
+            font-size: 26px
+        .for-card
+            min-height: 343px
+            img
+                max-height: 250px
+        .for-card-wrapper
+            a
+                font-size: 15px
+                width: 100%
+                max-width: 330px
+                height: 50px
+                padding-top: 12px
+    #author
+        p
+            font-size: 15px
+        img
+            max-height: 300px
+    #count-sec
+        .count
+            width: 100%
+            font-size: 40px
+            min-height: 30px
+            line-height: 30px
+        .string
+            line-height: 17px
+            font-size: 10px
+            min-height: 64px
+    #video-sec
+        padding-top: 20px
+    .image-container
+        margin-top: 20px
+    #faq-sec
+        h2
+            margin-top: 40px
+            padding-left: 0
+    .faq-card
+        .faq-title
+            font-size: 12px
+            line-height: 15px
+            white-space: normal
+            padding-left: 15px
+        .faq-desc
+            font-size: 10px
+            margin-left: 29px
+            padding-top: 12px
+        > img
+            max-width: 15px
+    #callback-sec
+        h3
+            font-size: 22px
+            line-height: 39px
+            margin-top: -15px
+        h4
+            font-size: 20px
+    .form-container
+        input[type=text]
+            margin-top: 5px
+            margin-bottom: 5px
+            width: 100%
+            max-width: inherit
+        input[type=submit]
+            width: 100%
+            margin-left: 0
+            margin-top: 5px
+    .footer-content
+        p
+            font-size: 15px
+            line-height: 20px
+
+@media (max-width: 500px)
+    #home-sec
+        background-position: 50px 330px
+    .pass-img
+        img
+            max-width: 80px
+@media (max-width: 400px)
+    .video-but
+        bottom: -107.53%
+
+@media (max-width: 360px)
+    .header
+        li
+            a
+                padding: 0
+                margin-left: 5px
+                margin-right: 5px
+
 
 
 
