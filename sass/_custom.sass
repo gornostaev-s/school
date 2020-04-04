@@ -219,7 +219,7 @@
 .age-info-text
 	white-space: pre-line
 .record-card
-	width: 340px
+	max-width: 340px
 	min-height: 414px
 	background: #fff
 	text-align: center
@@ -353,6 +353,7 @@
 	right: 8px
 .slick-prev
 	left: 16px
+	z-index: 2
 .slick-prev:before
 	content: ''
 	background: url(/img/prev-arrow.png)
@@ -421,6 +422,22 @@ section
 	#sec-teach-info
 		a
 			margin-bottom: 40px
+	.padd-col
+		padding-left: 0
+	.client-name
+		margin-left: 60px
+		margin-top: 10px
+	.img-client
+		margin-left: 60px
+	.review-content-text
+		margin-left: 30px
+		max-width: 760px
+	.image-facebook
+		max-width: 230px
+	#callback-sec.callback-sec-custom
+		h2.custom-h2
+			margin-top: 15px
+			font-size: 34px
 
 @media (max-width: 1000px)
 	#sec-teach-info
@@ -436,11 +453,58 @@ section
 			margin-right: 15px
 			margin-left: 15px
 			margin-top: 20px
+		.timetable
+			font-size: 32px
+			margin-right: 15px
+			margin-left: 15px
 	.age-info-box1
 		font-size: 16px
 		line-height: 21px
 		.text-blue-age
 			font-size: 54px
+	.block-prospects
+		.text-blue1
+			font-size: 30px
+			line-height: 85px
+	.text-in-pros
+		font-size: 18px
+	.reviews-title
+		font-size: 31px
+		margin-top: 40px
+
+@media (max-width: 992px)
+	.record-card
+		margin-top: 40px
+	.info-text-bottom
+		font-size: 16px
+		line-height: 18px
+	.img-client
+		margin-left: auto
+		margin-right: auto
+	.client-name
+		margin-left: auto
+		margin-right: auto
+	.review-content-text
+		font-size: 16px
+		padding-bottom: 60px
+	#sec-slider-reviews
+		.join-facebook
+			font-size: 34px
+	.image-facebook
+		max-width: 280px
+		padding-bottom: 20px
+	.button-facebook
+		font-size: 22px
+		width: 410px
+		height: 65px
+		padding-top: 18px
+	#callback-sec.callback-sec-custom
+		h2.custom-h2
+			margin-top: 10px
+			font-size: 31px
+		h4.custom-h4
+			font-size: 22px
+
 
 @media (max-width: 900px)
 	#home-sec1
@@ -459,10 +523,6 @@ section
 			height: 65px
 			padding-top: 15px
 			font-size: 23px
-	.block-prospects
-		.text-blue1
-			font-size: 30px
-			line-height: 37px
 
 
 @media (max-width: 810px)
@@ -498,9 +558,72 @@ section
 	#info-course-cost
 		.head-title
 			font-size: 27px
+		.timetable
+			font-size: 27px
+	#info-course-cost
+		h3
+			font-size: 20px
+			padding-top: 0
+			margin-bottom: 20px
+	.record-card
+		a
+			font-size: 21px
+			width: 230px
+			height: 45px
+			padding-top: 6px
+		p
+			font-size: 16px
+		.head-title-box
+			h2
+				font-size: 22px
+			h4
+				font-size: 16px
+	.reviews-title
+		font-size: 27px
+		line-height: 37px
+	.slick-next
+		right: 20px
+	.slick-prev
+		left: 33px
 
 @media (max-width: 768px)
 	.age-info-box1
+		margin-left: auto
+		margin-right: auto
+		max-width: 350px
+		text-align: center
+		font-size: 18px
+		padding-bottom: 30px
+		.age-info-text
+			white-space: inherit
+			margin-top: 8px
+	#info-course-cost
+		.timetable
+			padding-top: 25px
+			margin-bottom: 0
+	.review-content-text
+		font-size: 14px
+		margin-left: auto
+		margin-right: auto
+		max-width: 640px
+		padding-right: 30px
+		padding-left: 50px
+	.slick-next
+		right: 50px
+	.slick-prev
+		left: 53px
+	.review-content-text
+		padding-bottom: 50px
+	#sec-slider-reviews
+		.join-facebook
+			font-size: 30px
+	#callback-sec.callback-sec-custom
+		h2.custom-h2
+			font-size: 28px
+			line-height: 42px
+	.callback-sec-custom 
+		h4.custom-h4
+			font-size: 19px
 
 
 @media (max-width: 700px)
@@ -558,6 +681,66 @@ section
 		.head-title
 			font-size: 24px
 			line-height: 32px
+	.age-info-box1
+		font-size: 15px
+		.text-blue-age
+			font-size: 47px
+	#info-course-cost
+		h3
+			font-size: 17px
+			line-height: 25px
+			margin-left: 10px
+			margin-right: 10px
+	.record-card
+		max-width: 300px
+		min-height: 395px
+		a
+			font-size: 19px
+			width: 210px
+			height: 40px
+			padding-top: 4px
+		p
+			font-size: 15px
+			line-height: 19px
+		.head-title-box
+			h2
+				font-size: 20px
+			h4
+				font-size: 14px
+	.info-text-bottom
+		font-size: 14px
+		line-height: 14px
+		margin-left: 20px
+		margin-right: 20px
+	.reviews-title
+		font-size: 23px
+		line-height: 33px
+		margin-top: 20px
+		margin-right: 10px
+		margin-left: 10px
+	#sec-slider-reviews
+		.join-facebook
+			padding-left: 15px
+			padding-right: 15px
+			font-size: 26px
+	.image-facebook
+		width: 240px
+	.button-facebook
+		font-size: 18px
+		width: 340px
+		height: 58px
+		padding-top: 15px
+		margin-left: 0
+	#callback-sec.callback-sec-custom
+		h2.custom-h2
+			font-size: 24px
+			line-height: 38px
+			margin-top: 0px
+			padding-right: 20px
+			padding-left: 20px
+	.callback-sec-custom 
+		h4.custom-h4
+			font-size: 16px
 
 @media (max-width: 570px)
 	#sec-prospects
@@ -569,7 +752,24 @@ section
 	.block-prospects
 		margin-bottom: 50px
 		margin-top: 67px
-		height: 105px		
+		height: 105px
+	#info-course-cost
+		.timetable
+			padding-top: 20px
+	.age-info-box1
+		min-height: 140px
+	#info-course-cost
+		h3
+			font-size: 14px
+			line-height: 22px
+	.client-name
+		font-size: 16px	
+	.review-content-text
+		padding-bottom: 20px
+	#callback-sec.callback-sec-custom
+		h2.custom-h2
+			font-size: 19px
+			line-height: 34px	
 
 
 @media (max-width: 414px)
@@ -621,6 +821,65 @@ section
 	#info-course-cost
 		.head-title
 			font-size: 19px
+		.timetable
+			font-size: 23px
+	.age-info-box1
+		font-size: 12px
+		.text-blue-age
+			font-size: 40px
+	.age-info-box1
+		max-width: 280px
+		padding-bottom: 0
+	.record-card
+		max-width: 270px
+		min-height: 350px
+		a
+			font-size: 16px
+			width: 190px
+			height: 35px
+			padding-top: 2px
+		p
+			font-size: 13px
+			line-height: 15px
+		.head-title-box
+			h2
+				font-size: 17px
+			h4
+				font-size: 12px
+	.info-text-bottom
+		font-size: 11px
+		line-height: 12px
+	.reviews-title
+		font-size: 17px
+		line-height: 26px
+		margin-top: 20px
+		margin-right: 20px
+		margin-left: 20px
+	.review-content-text
+		line-height: 18px
+		padding-left: 52px
+		font-size: 12px	
+	.slick-prev
+		left: 32px
+	.slick-next
+		right: 30px
+	.review-content-text
+		padding-bottom: 30px
+	#sec-slider-reviews
+		.join-facebook
+			font-size: 22px
+			line-height: 27px
+	.image-facebook
+		width: 200px
+	.button-facebook
+		font-size: 16px
+		width: 285px
+		height: 50px
+		padding-top: 10px
+	#callback-sec.callback-sec-custom
+		h2.custom-h2
+			font-size: 16px
+			line-height: 32px
 
 @media (max-width: 370px)
 	#home-sec1
@@ -640,6 +899,10 @@ section
 		h2
 			font-size: 16px
 			line-height: 26px
+	.age-info-box1
+		font-size: 9px
+		.text-blue-age
+			font-size: 35px
 
 @media (max-width: 350px)
 	#sec-teach-info
@@ -649,6 +912,15 @@ section
 			padding-top: 9px
 			font-size: 16px
 			margin-left: 0
+	.age-info-box1
+		max-width: 240px
+	#sec-slider-reviews
+		.join-facebook
+			font-size: 17px
+	#callback-sec.callback-sec-custom
+		h2.custom-h2
+			font-size: 14px
+			line-height: 29px
 
 @media (min-width: 1200px)
 	.client-name
