@@ -13,29 +13,34 @@
 
 </head>
 <body>
- <section id="home-sec1">
+   <section id="home-sec1">
     <div class="header purple-header">
         <div class="container container1">
             <div class="row">
                 <div class="col-sm-5">
                     <ul class="topmenu">
+                                                <li>
+                            <a href="/">
+                                Главная
+                            </a>
+                        </li>
                         <li>
-                            <a href="javascript:void(0)">
+                            <a href="#sec-teach-info">
                                 О школе
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">
-                                Об авторе
+                            <a href="#timetable-block">
+                                Расписание
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">
-                                Вопросы
+                            <a href="#sec-slider-reviews">
+                                Отзывы
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">
+                            <a href="#callback-sec">
                                 Контакты
                             </a>
                         </li>
@@ -68,7 +73,7 @@
                 <h3>
                     Вводное занятие - <b class="text-blue">БЕСПЛАТНО!</b>
                 </h3>
-                <a class="but-teach" href="javascript:void(0);">
+                <a class="but-teach callback-open" href="javascript:void(0);">
                     Записаться на обучение
                 </a>
             </div>
@@ -126,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <a href="javascript:void(0);">
+            <a class="callback-open" href="javascript:void(0);">
                 Смотреть программу обучения
             </a>
         </div>
@@ -221,7 +226,7 @@
                 </div>
             </div>
         </div>
-        <h2 class="timetable">
+        <h2 id="timetable-block" class="timetable">
             Расписание занятий
         </h2>
         <h3>Мы очень ценим каждого ученика и создаем все возможные
@@ -247,7 +252,7 @@
                         <p>Время занятий
                             <b>суббота 14:00 - 15:30</b>
                         </p>
-                        <a href="javascript:void(0);">
+                        <a class="callback-open" href="javascript:void(0);">
                             Записаться
                         </a>
                     </div>
@@ -271,7 +276,7 @@
                             <p>Время занятий
                                 <b>планируется</b>
                             </p>
-                            <a href="javascript:void(0);">
+                            <a class="callback-open" href="javascript:void(0);">
                                 Записаться
                             </a>
                         </div>
@@ -295,7 +300,7 @@
                                 <p>Время занятий
                                     <b>планируется</b>
                                 </p>
-                                <a class="sign" href="javascript:void(0);">
+                                <a class="callback-open" href="javascript:void(0);">
                                     Записаться
                                 </a>
                             </div>
@@ -317,7 +322,7 @@
                     </h2>
                     <div class="row">
                         <div class="slider-reviews-box">
-                         <div class="slider-reviews-item">
+                           <div class="slider-reviews-item">
                             <div class="col-md-2 padd-col">
                                 <div class="img-client-name">
                                     <img class="img-client" src="img/img-client-ph.png" alt="">
@@ -372,7 +377,7 @@
                         <img class="image-facebook" src="img/img-facebook4.png" alt="">
                     </div>
                 </div>
-                <a class="button-facebook" href="javascript:void(0);">
+                <a class="button-facebook" href="#https://www.facebook.com/welearntothink/">
                     Перейти в Facebook
                 </a>
             </div>
@@ -417,6 +422,24 @@
                 </div>
             </footer>
 
+            <div class="modal-callback">
+                <div class="modal-overflow"></div>
+                <div class="modal-content">
+                    <img class="modal-close" src="/img/modal-close.png">
+                    <h3>Оставить заявку</h3>
+                    <h4>Мы свяжемся с вами в ближайшее время и уточним все детали.</h4>
+
+                    <form onsubmit="return sendmail();">
+                        <div><input type="text" placeholder="Ваше имя" name="name"></div>
+                        <div><input type="text" placeholder="Ваш телефон" name="tel"></div>
+                        <div><input type="submit" value="Оставить заявку"></div>
+                        <p class="policy">Отправляя информацию, вы соглашаетесь с
+                            <a href="/policy.html">политикой обработки персональных данных</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+
 
             <script src="js/jquery.min.js"></script>
             <script src="js/slick.min.js"></script>
@@ -424,6 +447,56 @@
                 jQuery('.slider-reviews-box').slick({
                     nav: true,
                 });
+            </script>
+            <script>
+
+                function sendmail(){
+                    return false;
+                }
+
+                $(document).ready(function() {
+                    $(".topmenu a").click(function() {
+                        var elementClick = $(this).attr("href")
+                        var destination = $(elementClick).offset().top;
+                        jQuery("html:not(:animated),body:not(:animated)").animate({
+                          scrollTop: destination
+                      }, 800);
+                        return false;
+                    });
+                });
+
+                jQuery('.video-but').click(function(){
+                    jQuery('.image-container').css('display','none')
+                    jQuery('.video-container').css('display','block')
+                })
+
+                jQuery('.callback-open').click(function(){
+                    jQuery('.modal-callback').fadeIn();
+                })
+                jQuery('.modal-overflow').click(function(){
+                    jQuery('.modal-close').click();
+                })
+                jQuery('.modal-close').click(function(){
+                    jQuery('.modal-callback').fadeOut();
+                })
+                jQuery('.faq-card .faq-title').click(function(){
+                    if(jQuery(this).parent('.faq-card').hasClass('faq-active')){
+                        jQuery(this).parent('.faq-card').removeClass('faq-active')
+                        jQuery(this).parent('.faq-card').find('.faq-desc').slideUp();
+                    } else {
+                        jQuery(this).parent('.faq-card').addClass('faq-active')
+                        jQuery(this).parent('.faq-card').find('.faq-desc').slideDown();
+                    }
+                })
+                jQuery('.faq-card > img').click(function(){
+                    if(jQuery(this).parent('.faq-card').hasClass('faq-active')){
+                        jQuery(this).parent('.faq-card').removeClass('faq-active')
+                        jQuery(this).parent('.faq-card').find('.faq-desc').slideUp();
+                    } else {
+                        jQuery(this).parent('.faq-card').addClass('faq-active')
+                        jQuery(this).parent('.faq-card').find('.faq-desc').slideDown();
+                    }
+                })
             </script>
 
 
