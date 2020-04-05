@@ -347,7 +347,7 @@
             <h3 class="text-blue">Уже сегодня</h3>
             <h4>Запоните форму и <span class="text-blue">начните обучение!</span></h4>
             <div class="form-container">
-                <form>
+                <form onsubmit="return sendmailFooter();">
                     <input type="text" name="name" placeholder="Ваше имя">
                     <input type="text" name="tel" placeholder="Ваше телефон">
                     <input type="submit" value="Записаться на обучение">
@@ -386,7 +386,7 @@
                 <h3>Оставить заявку</h3>
                 <h4>Мы свяжемся с вами в ближайшее время и уточним все детали.</h4>
 
-                <form onsubmit="return sendmail();">
+                <form onsubmit="return sendmailModal();">
                     <div><input type="text" placeholder="Ваше имя" name="name"></div>
                     <div><input type="text" placeholder="Ваш телефон" name="tel"></div>
                     <div><input type="submit" value="Оставить заявку"></div>
@@ -401,7 +401,44 @@
         <script src="/js/jquery.min.js"></script>
         <script>
 
-            function sendmail(){
+            function sendmailModal(){
+
+                var name = jQuery(".modal-callback input[name='name']").val();
+                var tel = jQuery(".modal-callback input[name='tel']").val();
+
+                jQuery.ajax({
+                        url: "/mail.php", // куда отправляем
+        				type: "post", // метод передачи
+						data: { // что отправляем
+							"name": name,
+							"tel": tel,
+						},
+						// после получения ответа сервера
+						success: function(data){
+                            alert('Сообщение успешно отправлено')
+						    jQuery('.modal-callback').fadeOut();
+						}
+                    });
+                return false;
+            }
+
+            function sendmailFooter(){
+
+                var name = jQuery(".form-container input[name='name']").val();
+                var tel = jQuery(".form-container input[name='tel']").val();
+
+                jQuery.ajax({
+                        url: "/mail.php", // куда отправляем
+        				type: "post", // метод передачи
+						data: { // что отправляем
+							"name": name,
+							"tel": tel,
+						},
+						// после получения ответа сервера
+						success: function(data){
+						    alert('Сообщение успешно отправлено')
+						}
+                    });
                 return false;
             }
 

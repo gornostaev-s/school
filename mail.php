@@ -1,8 +1,10 @@
 <?
 // 1 ЭТАП
 $data = []; // обьявление массива data
-$data['name'] = $_POST['name'];
-$data['tel'] = $_POST['tel'];
+if(isset($_POST['name'])){$data['name'] = $_POST['name'];}
+if(isset($_POST['tel'])){$data['tel'] = $_POST['tel'];}
+
+
 
 // 2 этап, формирование письма
 $email = 'mail@example.com';  // тип данных - строка
