@@ -2,6 +2,7 @@
 /dist/
 /.git/
 /css/
+/css/video.mp4
 /**/_backstage
 /**/package-lock.json
 /**/Thumbs.db
@@ -10,3 +11,4 @@
 =======
 
 >>>>>>> f9ed209840a87ca1e4340d18fae957499431652b
+img/video.mp4
