@@ -55,7 +55,7 @@
                         </div>
                         <div class="col-sm-2 callback-sec">
                             <div><a href="tel:+79289545320">+7 (928) 954-53-20</a></div>
-                            <div><a class="callback-open" href="tel:+79289545320">Заказать обратный звонок</a></div>
+                            <div><a class="callback-open" href="javascript:void(0);">Заказать обратный звонок</a></div>
                         </div>
                     </div>
                 </div>
@@ -377,12 +377,16 @@
         <div class="modal-callback">
             <div class="modal-overflow"></div>
             <div class="modal-content">
+                <img class="modal-close" src="/img/modal-close.png">
                 <h3>Оставить заявку</h3>
                 <h4>Мы свяжемся с вами в ближайшее время и уточним все детали.</h4>
                 <form>
                     <div><input type="text" placeholder="Ваше имя" name="name"></div>
                     <div><input type="text" placeholder="Ваш телефон" name="tel"></div>
                     <div><input type="submit" value="Оставить заявку"></div>
+                    <p class="policy">Отправляя информацию, вы соглашаетесь с
+                        <a href="#">политикой обработки персональных данных</a>
+                    </p>
                 </form>
             </div>
         </div>
@@ -390,6 +394,16 @@
 
         <script src="/js/jquery.min.js"></script>
         <script>
+
+                jQuery('.callback-open').click(function(){
+                    jQuery('.modal-callback').fadeIn();
+                })
+                jQuery('.modal-overflow').click(function(){
+                    jQuery('.modal-close').click();
+                })
+                jQuery('.modal-close').click(function(){
+                    jQuery('.modal-callback').fadeOut();
+                })
                 jQuery('.faq-card .faq-title').click(function(){
                     if(jQuery(this).parent('.faq-card').hasClass('faq-active')){
                         jQuery(this).parent('.faq-card').removeClass('faq-active')

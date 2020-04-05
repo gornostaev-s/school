@@ -16,6 +16,9 @@
     .image-container
         width: 1240px
 
+html
+    overflow-x: hidden
+
 .modal-callback
     width: 100vw
     height: 100vh
@@ -23,6 +26,7 @@
     top: 0
     left: 0
     z-index: 10
+    display: none
 
 .modal-overflow
     background: rgba(0, 0, 0, 0.5)
@@ -48,11 +52,44 @@
         font-weight: bold
         font-size: 36px
         font-family: "Montserrat"
+        margin-top: 20px
+        margin-bottom: 20px
     h4
         font-size: 24px
         color: #000000
         font-weight: 200
         font-family: "Montserrat"
+        margin-top: 20px
+        margin-bottom: 20px
+    input
+        width: 100%
+        max-width: 292px
+        height: 40px
+    input[type="text"]
+        margin-top: 5px
+        margin-bottom: 5px
+        border-radius: 5px
+        font-size: 18px
+        padding-left: 10px
+        border: 1px solid #3C5EFF
+    input[type="submit"]
+        border: 1px solid #3C5EFF
+        background: #3C5EFF
+        color: #fff
+        border-radius: 5px
+        font-size: 18px
+        margin-top: 5px
+    .policy
+        font-size: 18px
+        font-family: "Montserrat"
+        white-space: pre-line
+        a
+            text-decoration: underline
+    .modal-close
+        position: absolute
+        right: 10px
+        top: 10px
+        cursor: pointer
 
 #home-sec
     background: url(/img/home-bg.png)
@@ -189,7 +226,7 @@
     top: 36px
 
 #what-sec
-    overflow: inherit
+    overflow: visible
     h2
         white-space: pre-line
         text-align: center
@@ -574,6 +611,21 @@ footer
         line-height: 22px
         margin-top: 10px
 
+#policy
+    h1
+        text-align: center
+        font-size: 36px
+        font-family: "Montserrat"
+    h3
+        font-size: 24px
+        font-family: "Montserrat"
+    p
+        font-size: 18px
+        white-space: pre-line
+
+.purple-header
+    background: #03111E
+
 .footer-logo
     margin-top: 40px
 
@@ -725,6 +777,15 @@ footer
         opacity: 0.3
 
 @media (max-width: 769px)
+    #policy
+        h1
+            font-size: 20px
+        h3
+            font-size: 18px
+            font-family: "Montserrat"
+        p
+            font-size: 10px
+            white-space: pre-line
     .pass-card
         min-height: 220px
         padding-bottom: 10px
@@ -910,6 +971,13 @@ footer
         p
             font-size: 15px
             line-height: 20px
+    .modal-content
+        h3
+            font-size: 20px
+        h4
+            font-size: 18px
+        .policy
+            font-size: 11px
 
 @media (max-width: 500px)
     #home-sec
