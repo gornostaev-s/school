@@ -450,9 +450,48 @@
             </script>
             <script>
 
-                function sendmail(){
-                    return false;
-                }
+             <script>
+
+            function sendmailModal(){
+
+                var name = jQuery(".modal-callback input[name='name']").val();
+                var tel = jQuery(".modal-callback input[name='tel']").val();
+
+                jQuery.ajax({
+                        url: "/mail.php", // куда отправляем
+                        type: "post", // метод передачи
+                        data: { // что отправляем
+                            "name": name,
+                            "tel": tel,
+                        },
+                        // после получения ответа сервера
+                        success: function(data){
+                            alert('Сообщение успешно отправлено')
+                            jQuery('.modal-callback').fadeOut();
+                        }
+                    });
+                return false;
+            }
+
+            function sendmailFooter(){
+
+                var name = jQuery(".form-container input[name='name']").val();
+                var tel = jQuery(".form-container input[name='tel']").val();
+
+                jQuery.ajax({
+                        url: "/mail.php", // куда отправляем
+                        type: "post", // метод передачи
+                        data: { // что отправляем
+                            "name": name,
+                            "tel": tel,
+                        },
+                        // после получения ответа сервера
+                        success: function(data){
+                            alert('Сообщение успешно отправлено')
+                        }
+                    });
+                return false;
+            }
 
                 $(document).ready(function() {
                     $(".topmenu a").click(function() {
